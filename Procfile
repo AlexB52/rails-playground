@@ -1,2 +1,2 @@
 esbuild: npm run watch
-server: bin/rails server -p 3000
+web: bin/rails server -p 5000

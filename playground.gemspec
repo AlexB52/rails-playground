@@ -18,4 +18,5 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 7.0.2.2"
+  spec.add_dependency "web-console"
 end
