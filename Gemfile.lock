@@ -175,6 +175,7 @@ DEPENDENCIES
   puma
   sprockets-rails
   sqlite3
+  web-console
 
 BUNDLED WITH
    2.3.7
