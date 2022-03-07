@@ -30,7 +30,7 @@ module Playground
     end
 
     def script_paths
-      Dir[Rails.root.join("lib", "playgrounds", "**", "*")]
+      Dir[Rails.root.join("lib", "playground", "**", "*")]
         .reject {|fn| File.directory?(fn) }
     end
   end
