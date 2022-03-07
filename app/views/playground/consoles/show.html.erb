@@ -1,3 +1,20 @@
-<h1>Playground</h1>
+<h1 data-controller="hello">Playground</h1>
 
-<div data-controller="hello"></div>
+<div style="display:flex;">
+  <div class="sidebar">
+    <div
+      data-controller="search-scripts"
+      data-search-scripts-url-value="<%= scripts_path(format: :turbo_stream) %>">
+      <%= text_field_tag :search, "",
+        placeholder: 'search for scripts',
+        data: { action: 'input->search-scripts#getScripts' }
+      %>
+    </div>
+
+    <%= turbo_frame_tag :scripts, src: scripts_path(format: :turbo_stream) %>
+  </div>
+
+  <div class="code">
+    <%= turbo_frame_tag :script, src: new_script_path(format: :turbo_stream) %>
+  </div>
+</div>

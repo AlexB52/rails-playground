@@ -1,0 +1,3 @@
+  <div id="scripts" data-controller="select-script">
+    <%= select_tag :scripts, script_options(scripts) , size: script_size(scripts), data: {action: 'change->select-script#getScript'} %>
+  </div>
