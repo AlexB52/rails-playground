@@ -4,8 +4,10 @@ module Playground
   class ConsolesControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
-    # test "the truth" do
-    #   assert true
-    # end
+    test "GET #show" do
+      get root_path
+
+      assert_response :success
+    end
   end
 end
