@@ -6,7 +6,7 @@
     "esbuild": "^0.14.25"
   },
   "scripts": {
-    "watch": "esbuild javascript/application.js --outfile=app/assets/javascript/playground/application.js --bundle --watch",
-    "build": "esbuild javascript/application.js --outfile=app/assets/javascript/playground/application.js --bundle"
+    "watch": "esbuild javascript/application.js --outfile=app/assets/javascripts/playground/application.js --bundle --watch",
+    "build": "esbuild javascript/application.js --outfile=app/assets/javascripts/playground/application.js --bundle"
   }
 }

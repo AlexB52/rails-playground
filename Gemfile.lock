@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     playground (0.1.0)
-      rails (>= 7.0.2.2)
       turbo-rails
       web-console
 
@@ -186,10 +185,9 @@ DEPENDENCIES
   debug (>= 1.0.0)
   playground!
   puma
+  rails
   sprockets-rails
   sqlite3
-  turbo-rails
-  web-console
 
 BUNDLED WITH
    2.3.7
