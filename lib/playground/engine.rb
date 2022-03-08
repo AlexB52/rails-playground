@@ -17,11 +17,5 @@ module Playground
       app.middleware.insert_before(::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/vendor")
     end
 
-    # initializer "playground.helpers", before: :load_config_initializers do
-    #   ActiveSupport.on_load(:action_controller_base) do
-    #     include Turbo::Streams::TurboStreamsTagBuilder, Turbo::Frames::FrameRequest, Turbo::Native::Navigation
-    #     helper Turbo::Engine.helpers
-    #   end
-    # end
   end
 end
