@@ -6,29 +6,9 @@
   <%= csp_meta_tag %>
 
   <%= javascript_include_tag "playground/application", skip_pipeline: true, nonce: true, media: "all" %>
-
-  <style type="text/css">
-    body { max-width:900px; margin:auto; padding:0 1rem; }
-
-    .code { flex-grow:1; height:500px; }
-    .sidebar, .code { margin-right:1rem; }
-
-    textarea, input, select {
-      -webkit-box-sizing:border-box;
-         -moz-box-sizing:border-box;
-              box-sizing:border-box;
-    }
-
-    textarea, select { padding:1rem; height:100%; max-height:500px; }
-    textarea { width:100%; max-height:500px; white-space:nowrap; }
-    input { margin-bottom:0.5rem; padding:0.5rem;}
-    select, input { width:200px; }
-    select { font-size:0.7em; }
-  </style>
+  <%= stylesheet_link_tag "/stylesheets/playground/application", media: "all" %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>
