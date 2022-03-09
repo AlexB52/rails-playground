@@ -5,7 +5,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= javascript_include_tag "playground/application", nonce: true, media: "all" %>
+  <%= javascript_include_tag "playground/application", skip_pipeline: true, nonce: true, media: "all" %>
 
   <style type="text/css">
     body { max-width:900px; margin:auto; padding:0 1rem; }
