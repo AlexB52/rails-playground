@@ -14,7 +14,7 @@
     <%= turbo_frame_tag :scripts, src: scripts_path(format: :turbo_stream) %>
   </div>
 
-  <div class="code">
+  <div class="code" data-controller="playground">
     <%= turbo_frame_tag :script, src: new_script_path(format: :turbo_stream) %>
   </div>
 </div>
