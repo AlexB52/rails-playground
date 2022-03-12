@@ -1,4 +1,3 @@
-require "debug"
 require "web-console"
 
 WebConsole::View.class_eval do
