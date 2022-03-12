@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "@codemirror/basic-setup": "^0.19.1",
+    "@codemirror/commands": "^0.19.8",
+    "@codemirror/lang-javascript": "^0.19.7",
+    "@codemirror/legacy-modes": "^0.19.1",
+    "@codemirror/state": "^0.19.9",
+    "@codemirror/stream-parser": "^0.19.7",
+    "@codemirror/view": "^0.19.47",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.1",
     "@rails/request.js": "^0.0.6"
