@@ -18,6 +18,8 @@ There are three ways to run ruby code in the console:
 * Put your cursor on any line (no selection) and press cmd+Enter
 * Type your code straight in the terminal box just like in a rails console
 
+![CleanShot 2022-03-12 at 23 36 59](https://user-images.githubusercontent.com/7149034/158014702-954dbb2b-32e5-44dd-92d1-9e2b9e2354ad.gif)
+
 ## Installation
 
 Playground is built on top of `web-console` gem. Just like `web-console`, `playground` is only meant to be used in development. Every `web-console` information still holds true for `playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
