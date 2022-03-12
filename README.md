@@ -4,7 +4,11 @@ Back-and-forths from your editor and your rails console is a thing of the past!
 
 Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Editor, `playground` is a rails engine that makes it really easy to experiment with your application domain.
 
-On top of the console, `playground` comes with a script management feature to help your personal and team development. You can use and save personal scripts that are gitignored. You can also use and save shared scripts with your team that are versioned controlled. Shared scripts stay close to the code, are versioned controlled and are easier to maintain.
+On top of the console, `playground` comes with a script management feature to help your personal and team development. It allows you to:
+* use and save gitignored scripts for personal use. 
+* use and save version-controller scripts with your team. 
+
+This way, shared scripts stay close to the code and more maintainable while your personal script do not pollute the git history.
 
 ## Usage
 
