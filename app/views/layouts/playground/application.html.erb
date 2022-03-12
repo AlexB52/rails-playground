@@ -8,7 +8,7 @@
   <%= javascript_include_tag "playground/application", skip_pipeline: true, nonce: true, media: "all" %>
   <%= stylesheet_link_tag "/stylesheets/playground/application", media: "all" %>
 </head>
-  <body>
+  <body id="playground">
     <%= yield %>
   </body>
 </html>

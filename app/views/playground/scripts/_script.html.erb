@@ -1,8 +1,7 @@
-<%= text_area_tag :playground,
+<%= text_area_tag :playground_editor,
   @_script,
   data: {
     playground_target: 'textarea',
     action: 'keydown->playground#runCode',
-    controller: 'playground'
   }
 %>
