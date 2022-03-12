@@ -1,6 +1,6 @@
 # Playground
 
-Copy-pasting back and forth code from your editor to the rails console is a thing of the past!
+Back-and-forths from your editor and your rails console is a thing of the past!
 
 Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Editor, `playground` is a rails engine that makes it really easy to experiment with your application domain.
 
