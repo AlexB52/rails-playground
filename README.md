@@ -18,7 +18,7 @@ There are three ways to run ruby code in the console:
 * Put your cursor on any line (no selection) and press cmd+Enter
 * Type your code straight in the terminal box just like in a rails console
 
-![CleanShot 2022-03-12 at 23 36 59](https://user-images.githubusercontent.com/7149034/158014702-954dbb2b-32e5-44dd-92d1-9e2b9e2354ad.gif)
+![CleanShot 2022-03-12 at 23 41 03](https://user-images.githubusercontent.com/7149034/158014859-47625c95-aa59-489a-9681-eb36e378dcba.gif)
 
 ## Installation
 
