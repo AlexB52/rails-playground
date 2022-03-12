@@ -16,25 +16,22 @@ body#playground .console-actions {
 }
 body#playground .code {
   flex-grow: 1;
-  height: 500px;
+  height: 550px;
+  position: relative;
 }
 body#playground .sidebar {
   margin-right: 1rem;
 }
-body#playground textarea, body#playground input, body#playground select, body#playground .console {
+body#playground input, body#playground select, body#playground .console {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body#playground textarea, body#playground select {
+body#playground select {
+  font-size: 0.7em;
   padding: 1rem;
   height: 100%;
   max-height: 500px;
-}
-body#playground textarea {
-  width: 100%;
-  max-height: 500px;
-  white-space: nowrap;
 }
 body#playground input {
   margin-bottom: 0.5rem;
@@ -43,9 +40,6 @@ body#playground input {
 body#playground select, body#playground input {
   width: 200px;
 }
-body#playground select {
-  font-size: 0.7em;
-}
 body#playground [data-controller=codemirror] {
   height: 100%;
 }
@@ -53,7 +47,11 @@ body#playground [data-controller=codemirror] .cm-scroller {
   overflow: auto;
 }
 body#playground [data-controller=codemirror] .cm-editor {
-  height: 100%;
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=application.css.map */

@@ -8,23 +8,21 @@ body#playground { max-width:900px; margin:auto; padding:0 1rem;
 
   .console-actions { display: none;}
 
-  .code { flex-grow:1; height:500px; }
+  .code { flex-grow:1; height:550px; position: relative; }
   .sidebar { margin-right:1rem;}
 
-  textarea, input, select, .console {
+  input, select, .console {
     -webkit-box-sizing:border-box;
        -moz-box-sizing:border-box;
             box-sizing:border-box;
   }
 
-  textarea, select { padding:1rem; height:100%; max-height:500px; }
-  textarea { width:100%; max-height:500px; white-space:nowrap; }
+  select { font-size:0.7em; padding:1rem; height:100%; max-height:500px; }
   input { margin-bottom:0.5rem; padding:0.5rem;}
   select, input { width:200px; }
-  select { font-size:0.7em; }
 
   [data-controller="codemirror"] { height:100%;
     .cm-scroller { overflow: auto }
-    .cm-editor { height:100%; }
+    .cm-editor { position:absolute !important; top:0; right:0; bottom:0; left:0; }
   }
 }
