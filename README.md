@@ -8,7 +8,7 @@ On top of the console, `playground` comes with a script management feature to he
 
 ## Usage
 
-There are three ways you can use to run ruby code in the console:
+There are three ways to run ruby code in the console:
 
 * Select your code in the editor and press cmd+Enter
 * Put your cursor on any line (no selection) and press cmd+Enter
