@@ -46,5 +46,14 @@ body#playground select, body#playground input {
 body#playground select {
   font-size: 0.7em;
 }
+body#playground [data-controller=codemirror] {
+  height: 100%;
+}
+body#playground [data-controller=codemirror] .cm-scroller {
+  overflow: auto;
+}
+body#playground [data-controller=codemirror] .cm-editor {
+  height: 100%;
+}
 
 /*# sourceMappingURL=application.css.map */

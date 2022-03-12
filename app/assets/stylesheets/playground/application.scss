@@ -22,4 +22,9 @@ body#playground { max-width:900px; margin:auto; padding:0 1rem;
   input { margin-bottom:0.5rem; padding:0.5rem;}
   select, input { width:200px; }
   select { font-size:0.7em; }
+
+  [data-controller="codemirror"] { height:100%;
+    .cm-scroller { overflow: auto }
+    .cm-editor { height:100%; }
+  }
 }
