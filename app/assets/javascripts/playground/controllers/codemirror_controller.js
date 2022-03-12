@@ -10,8 +10,6 @@ export default class extends Controller {
   static values = { script: String }
 
   connect() {
-    this.console = REPLConsole.installInto('console')
-
     this.editor = new EditorView({
       parent: this.element,
       state: EditorState.create({
@@ -19,16 +17,16 @@ export default class extends Controller {
         extensions: [
           basicSetup,
           StreamLanguage.define(ruby),
-          Prec.high(keymap.of([{key: "Mod-Enter", run: () => this.runCodeSelection}])),
+          Prec.high(keymap.of([{key: "Mod-Enter", run: () => this.submitCodeSelected}])),
           keymap.of([indentWithTab])
         ]
       })
     })
   }
 
-  get runCodeSelection() {
-    this.console.setInput(this.selectedBlock)
-    this.console.onEnterKey()
+  get submitCodeSelected() {
+    const event = new CustomEvent('codeSubmission', { detail: { selection: this.selectedBlock } });
+    this.element.dispatchEvent(event);
     return true
   }
 
