@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails-playground (0.1.1)
+    rails-playground (0.1.2)
       turbo-rails
       web-console
 
