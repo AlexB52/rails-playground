@@ -11,6 +11,9 @@ module Dummy
   class Application < Rails::Application
     config.load_defaults Rails::VERSION::STRING.to_f
 
+    # allows test application to run the web console in test environment
+    config.web_console.development_only = false
+
     # For compatibility with applications that use this config
     config.action_controller.include_all_helpers = false
     # Configuration for the application, engines, and railties goes here.
