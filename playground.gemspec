@@ -5,12 +5,12 @@ Gem::Specification.new do |spec|
   spec.version     = Playground::VERSION
   spec.authors     = ["Alexandre Barret"]
   spec.email       = ["barret.alx@gmail.com"]
-  spec.homepage    = "https://github.com/AlexB52/playground"
-  spec.summary     = "A playground web console for Rails applications."
+  spec.homepage    = "https://github.com/AlexB52/rails-playground"
+  spec.summary     = "A local playground for Rails applications."
   spec.license     = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/AlexB52/playground"
+  spec.metadata["source_code_uri"] = "https://github.com/AlexB52/rails-playground"
   # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
