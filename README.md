@@ -1,12 +1,13 @@
-# Playground
+# (Rails) Playground
 
 Back-and-forths from your editor and your rails console is a thing of the past!
 
 ![CleanShot 2022-03-12 at 23 41 03](https://user-images.githubusercontent.com/7149034/158014859-47625c95-aa59-489a-9681-eb36e378dcba.gif)
 
-Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Editor, `playground` is a rails engine that makes it really easy to experiment with your application domain.
+Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Editor, `rails-playground` is a rails engine that eases experiments with your application domain.
 
-In addition to a web console, `playground` comes with a script management feature to help your personal and team development. It allows you to:
+In addition to a web console, `rails-playground` comes with a script management feature to help your personal and team development. It allows you to:
+
 * use and save gitignored scripts for personal use. 
 * use and save version-controller scripts with your team. 
 
@@ -22,30 +23,33 @@ There are three ways to run ruby code in the console:
 
 ## Installation
 
-Playground is built on top of `web-console` gem. Just like `web-console`, `playground` is only meant to be used in development. Every `web-console` information still holds true for `playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
+Playground is built on top of `web-console` gem. Just like `web-console`, it's only meant to be used in development. Every `web-console` information still holds true for `rails-playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
 
-
-You can require `playground` after `web-console` in your Gemfile if you already use it. 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile under the development group:
 
 ```ruby
 group :development do
-  gem "playground"
+  gem "rails-playground", require: "playground"
 end
 ```
+
+_**Naming issue:** The gem was originally supposed to be called `playground` but it already exists in RubyGems... Thus the gem is now called `rails-playground` but the functionality remains under the `playground` namespace for now._
 
 And then execute:
 ```bash
 $ bundle
 ```
 
-Then mount `playground` in your routes file and access the playground at `http://localhost:{PORT}/playground` on your local machine.
+Finally mount the engine in your routes file and access the playground at `http://localhost:{PORT}/playground` on your local machine.
+
 ```ruby
 Rails.application.routes.draw do
   mount Playground::Engine => "/playground"
   # ...
 end
 ```
+
+_You can choose any relative path and switch from `/playground` to `/rails/play` for example._
 
 ## Troubleshouting
 
