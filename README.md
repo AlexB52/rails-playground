@@ -2,18 +2,21 @@
 
 Back-and-forths from your editor and your rails console is a thing of the past!
 
-![CleanShot 2022-03-12 at 23 41 03](https://user-images.githubusercontent.com/7149034/158014859-47625c95-aa59-489a-9681-eb36e378dcba.gif)
+![playground-demo](https://user-images.githubusercontent.com/7149034/158045230-3129bf4e-8eeb-4096-9293-04a8c6003bed.gif)
+
+## Features
+
+### Query Editor
 
 Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Editor, `rails-playground` is a rails engine that eases experiments with your application domain.
 
-In addition to a web console, `rails-playground` comes with a script management feature to help your personal and team development. It allows you to:
+### Script Management
 
-* use and save gitignored scripts for personal use. 
-* use and save version-controller scripts with your team. 
-
-This way, shared scripts stay close to the code and more maintainable while your personal script do not pollute the git history.
+The gem also comes with a script management tool to help share useful scripts with your teamates. Shared scripts stay close to the code and become more maintainable while personal scripts are git ignored and don't pollute the git history.
 
 ## Usage
+
+### Query Editor
 
 There are three ways to run ruby code in the console:
 
@@ -21,7 +24,15 @@ There are three ways to run ruby code in the console:
 * Put your cursor on any line (no selection) and press cmd+Enter
 * Type your code straight in the terminal box just like in a rails console
 
+### Script Management
+
+Any files under `lib/playground` folder will appear in the sidebar. You can filter them by name from the search input.
+
+See [Ignoring personal scripts](#ignoring-personal-scripts) to share scripts with your team while ignoring personal scripts.
+
 ## Installation
+
+### Query Editor
 
 Playground is built on top of `web-console` gem. Just like `web-console`, it's only meant to be used in development. Every `web-console` information still holds true for `rails-playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
 
@@ -33,14 +44,14 @@ group :development do
 end
 ```
 
-_**Naming issue:** The gem was originally supposed to be called `playground` but it already exists in RubyGems... Thus the gem is now called `rails-playground` but the functionality remains under the `playground` namespace for now._
+_**Naming issue:** The gem was originally called `playground` but it already exists in RubyGems... Thus the gem is now called `rails-playground` but the functionality remains under the `playground` namespace for now._
 
 And then execute:
 ```bash
 $ bundle
 ```
 
-Finally mount the engine in your routes file and access the playground at `http://localhost:{PORT}/playground` on your local machine.
+Finally mount the engine in your routes file and access the web playground at `/playground` on your local host.
 
 ```ruby
 Rails.application.routes.draw do
@@ -49,7 +60,49 @@ Rails.application.routes.draw do
 end
 ```
 
-_You can choose any relative path and switch from `/playground` to `/rails/play` for example._
+_Nothing stops you from choosing any relative path. For example you could switch from `/playground` to `/rails/play`._
+
+### Ignoring personal scripts
+
+Adding a folder from lib/playground in `.gitignore` will still show in the sidebar.
+**Decide on a convention** with your teamates and commit the path to your `.gitignore`.
+Unlike any other scripts, any changes made to ignored scripts won't be recorded in your git history.
+
+**Example**
+
+Here is an example of file structure
+
+* scripts version controlled
+  * lib/playground/shared_script_a.rb
+  * lib/playground/shared_script_b.rb
+  * lib/playground/namespace/shared_script_c.rb
+* scripts ignored
+  * lib/playground/my_scripts/my_script_a.rb
+  * lib/playground/my_scripts/my_script_b.rb
+
+```
+.gitignore
+
+/lib/playground/my_scripts/
+```
+
+```
+my_app/
+├─ app/
+├─ bin/
+├─ config/
+├─ db/
+├─ lib/
+│  ├─ playground/
+│  │  ├─ namespace/
+│  │  │  ├─ shared_script_c.rb
+│  │  ├─ my_scripts/
+│  │  │  ├─ my_script_a.rb
+│  │  │  ├─ my_script_b.rb
+│  │  ├─ shared_script_a.rb
+│  │  ├─ shared_script_b.rb
+├─ .gitignore
+```
 
 ## Troubleshouting
 

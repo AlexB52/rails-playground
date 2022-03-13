@@ -8,4 +8,5 @@
 /test/dummy/log/*.log
 /test/dummy/storage/
 /test/dummy/tmp/
+/test/dummy/lib/playground/personal/
 node_modules
