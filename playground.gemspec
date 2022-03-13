@@ -1,7 +1,7 @@
 require_relative "lib/playground/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "playground"
+  spec.name        = "rails-playground"
   spec.version     = Playground::VERSION
   spec.authors     = ["Alexandre Barret"]
   spec.email       = ["barret.alx@gmail.com"]

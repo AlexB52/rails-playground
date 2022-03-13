@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    playground (0.1.0)
+    rails-playground (0.1.0)
       turbo-rails
       web-console
 
@@ -207,9 +207,9 @@ PLATFORMS
 DEPENDENCIES
   capybara
   debug (>= 1.0.0)
-  playground!
   puma
   rails (~> 7.0.2)
+  rails-playground!
   selenium-webdriver
   sprockets-rails
   sqlite3
