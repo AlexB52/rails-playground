@@ -12,7 +12,7 @@ Inspired by the Go playground and SQL Server Management Studio (SSMS) Query Edit
 
 ### Script Management
 
-The gem also comes with a script management tool to help share useful scripts with your teamates. Shared scripts stay close to the code and become more maintainable while personal scripts are git ignored and don't pollute the git history.
+The gem also comes with a script management tool to help share useful scripts with your teammates. Shared scripts stay close to the code and become more maintainable while personal scripts are git ignored and don't pollute the git history.
 
 ## Usage
 
@@ -34,7 +34,7 @@ See [Ignoring personal scripts](#ignoring-personal-scripts) to share scripts wit
 
 ### Query Editor
 
-Playground is built on top of `web-console` gem. Just like `web-console`, it's only meant to be used in development. Every `web-console` information still holds true for `rails-playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
+Playground is built on top of `web-console` gem. Just like `web-console`, it's only meant to be used in development. Every `web-console` information still holds for `rails-playground`. Check `web-console` [repository for more information](https://github.com/rails/web-console)
 
 Add this line to your application's Gemfile under the development group:
 
@@ -51,7 +51,7 @@ And then execute:
 $ bundle
 ```
 
-Finally mount the engine in your routes file and access the web playground at `/playground` on your local host.
+Finally, mount the engine in your routes file and access the web playground at `/playground` on your localhost.
 
 ```ruby
 Rails.application.routes.draw do
@@ -60,13 +60,13 @@ Rails.application.routes.draw do
 end
 ```
 
-_Nothing stops you from choosing any relative path. For example you could switch from `/playground` to `/rails/play`._
+_Nothing stops you from choosing any relative path. For example, you could switch from `/playground` to `/rails/play`._
 
 ### Ignoring personal scripts
 
-Adding a folder from lib/playground in `.gitignore` will still show in the sidebar.
-**Decide on a convention** with your teamates and commit the path to your `.gitignore`.
-Unlike any other scripts, any changes made to ignored scripts won't be recorded in your git history.
+Any changes made to ignored scripts won't be recorded in your git history.
+Adding a folder from lib/playground in `.gitignore` will, however, still show in the sidebar.
+**Decide on a convention** with your teammates and commit the path to your `.gitignore`.
 
 **Example**
 
@@ -104,7 +104,7 @@ my_app/
 ├─ .gitignore
 ```
 
-## Troubleshouting
+## Troubleshooting
 
 ### Session :id is no longer available in memory.
 
@@ -117,7 +117,7 @@ this request hit doesn't store e96248aec85b3006488c276b9468a4d8 in memory. Consi
 processes/workers to one (1) or using a different server in development.
 ```
 
-This is a known `web-console` error which happened when you run a multi threaded server locally.
+This is a known `web-console` error that happens when you run a multi-threaded server locally.
 To solve this problem make sure to set the number of processes/worker to 1 on your local server.
 
 ## License
