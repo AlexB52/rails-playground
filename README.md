@@ -55,7 +55,7 @@ Finally, mount the engine in your routes file and access the web playground at `
 
 ```ruby
 Rails.application.routes.draw do
-  mount Playground::Engine => "/playground"
+  mount Playground::Engine => "/playground" if Rails.env.development?
   # ...
 end
 ```
