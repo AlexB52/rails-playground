@@ -13,9 +13,9 @@
   },
   "scripts": {
     "jswatch": "npm run jsbuild -- --watch",
-    "jsbuild": "esbuild app/assets/javascripts/playground/application.js --bundle --minify  --outfile=vendor/javascripts/playground/application.js",
+    "jsbuild": "esbuild app/assets/javascripts/application.js --bundle --minify  --outfile=vendor/javascripts/playground/application.js",
     "csswatch": "npm run cssbuild -- --watch",
-    "cssbuild": "sass app/assets/stylesheets/playground/application.scss vendor/stylesheets/playground/application.css"
+    "cssbuild": "sass app/assets/stylesheets/application.scss vendor/stylesheets/playground/application.css"
   },
   "devDependencies": {
     "esbuild": "^0.14.25",
