@@ -7,12 +7,28 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1.2
-        bundler-cache: true
-    - run: bin/rails test app:test
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - run: bin/rails app:test
+
+  system-tests:
+    runs-on: macos-latest # for capybara command VS control key in system spec
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nanasess/setup-chromedriver@v1
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - run: bin/rails app:test:system
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: ci-screenshots
+          path: test/dummy/tmp/screenshots/
