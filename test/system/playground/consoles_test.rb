@@ -27,7 +27,9 @@ module Playground
 
       # run a selected block
       send_keys [:command, 'a'], [:command, :return]
-      assert_text %Q{=> "Hello, World!"}
+      within('#console') do
+        assert_text %Q{=> "Hello, World!"}
+      end
 
       # run a single line
       first(".cm-line", text: 'HelloWorld.hello').click
