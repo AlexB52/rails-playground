@@ -10,3 +10,4 @@
 /test/dummy/tmp/
 /test/dummy/lib/playground/personal/
 node_modules
+*.DS_Store
