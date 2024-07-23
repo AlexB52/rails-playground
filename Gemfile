@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Specify your gem's dependencies in playground.gemspec.
 gemspec
 
-gem "sqlite3"
+gem "sqlite3", "~> 1.7"
 gem "rails", "~> 7.0.2"
 gem "puma"
 gem "sprockets-rails"
