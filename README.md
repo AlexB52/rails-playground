@@ -1,5 +1,3 @@
-⚠️ Currently broken and I don't have any incentive to fix it just yet. 
-
 # (Rails) Playground
 
 Back-and-forths from your editor and your rails console is a thing of the past!
